@@ -1,3 +1,5 @@
+
+print('KS - CARFLIP HAS BEEN STARTED')
 fx_version 'cerulean'
 games { 'rdr3', 'gta5' }
 

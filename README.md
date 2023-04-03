@@ -11,7 +11,7 @@ This is an carflip script without jobs made for all players who cars are fliped 
 
 # OPTIONAL
 
-* Just -- out shared_scripts or use your own framework imports
+* Just uncomment '@Framework/imports.lua' with -- or use your own framework imports
 
 
 

@@ -15,7 +15,8 @@ This is an carflip script without jobs made for all players who cars are fliped 
 
 Add qb-target function under Config.TargetBones in init.lua
 
-```{
+```
+ {
     type = "client",
     event = "ks-carflip:flipcar",
     icon = "fas fa-car",

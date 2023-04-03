@@ -13,7 +13,7 @@ This is an carflip script without jobs made for all players who cars are fliped 
 
 * Just -- out shared_scripts or use your own framework imports
 
-Add qb-target function under Config.TargetBones in init.lua
+
 
 
 # Add qb-target function under Config.TargetBones in init.lua file

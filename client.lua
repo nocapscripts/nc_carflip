@@ -1,6 +1,8 @@
 local Core = exports[Config.Framework]:GetCoreObject()
 
 
+
+--Fliperiino event
 RegisterNetEvent('rs_carflip:flipcar')
 AddEventHandler('rs_carflip:flipcar', function()
     print("Fliping vehicle!")
@@ -10,7 +12,7 @@ end)
 
 
 
-
+-- Fliperiino function
 function FlipCarOver()
     local ped = PlayerPedId()
     local pedcoords = GetEntityCoords(ped)
@@ -29,6 +31,7 @@ function FlipCarOver()
                 Wait(10)
             end
             lib.progressCircle({
+                label = Lang:t('notify.fliping'),
                 duration = Config.duration,
                 position = Config.position,
                 useWhileDead = Config.useWhileDead,
@@ -41,9 +44,7 @@ function FlipCarOver()
                     clip = 'pushcar_offcliff_m'
                 },
             })
-            --TaskPlayAnim(ped, 'missfinale_c2ig_11', 'pushcar_offcliff_m', 2.0, -8.0, -1, 35, 0, 0, 0, 0)
-            --Wait(10000)
-            
+           
             local carCoords = GetEntityRotation(VehicleData, 2)
             SetEntityRotation(VehicleData, carCoords[1], 0, carCoords[3], 2, true)
             SetVehicleOnGroundProperly(VehicleData)

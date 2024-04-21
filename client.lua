@@ -1,7 +1,10 @@
+local Core = exports[Config.Framework]:GetCoreObject()
 
-RegisterNetEvent('ks-carflip:flipcar')
-AddEventHandler('ks-carflip:flipcar', function()
-    FlipCarOver()
+
+RegisterNetEvent('rs_carflip:flipcar')
+AddEventHandler('rs_carflip:flipcar', function()
+    print("Fliping vehicle!")
+    return FlipCarOver()
 end)
 
 
@@ -12,7 +15,7 @@ function FlipCarOver()
     local ped = PlayerPedId()
     local pedcoords = GetEntityCoords(ped)
 
-    VehicleData = QBCore.Functions.GetClosestVehicle()
+    local VehicleData = Core.Functions.GetClosestVehicle()
     
     local dist = #(pedcoords - GetEntityCoords(VehicleData))
     local success = lib.skillCheck({'easy', 'easy', {areaSize = 60, speedMultiplier = 2}, 'hard'}, {'x', 'x', 'x', 'x'})
@@ -46,11 +49,11 @@ function FlipCarOver()
             SetVehicleOnGroundProperly(VehicleData)
             lib.notify({
                 id = '1',
-                title = 'CarFlip',
-                description = 'Auto taastatud',
+                title = Lang:t('notify.title'),
+                description = Lang:t('notify.desc'),
                 position = 'bottom',
                 style = {
-                    backgroundColor = '#141517',
+                    backgroundColor = '#243661',
                     color = '#909296'
                 },
                 icon = 'car',
@@ -61,12 +64,12 @@ function FlipCarOver()
     elseif IsVehicleOnAllWheels(VehicleData) ~= false then
         lib.notify({
             id = '1',
-            title = 'CarFlip',
-            description = 'Auto taastamine ebaõnnestus või teie auto pole ebakorrektses asendis',
+            title = Lang:t('notify.title'),
+            description = Lang:t('notify.fail'),
             position = 'bottom',
             style = {
-                backgroundColor = '#141517',
-                color = '#909296'
+                backgroundColor = '#243661',
+                color = '#D2D2D2'
             },
             icon = 'warning',
             iconColor = '#C53030'

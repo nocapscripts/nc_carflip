@@ -1,6 +1,6 @@
-# KS CARFLIP FOR QBCORE
+# ReduX Scripts Vehicle Flip System
 
-This is an carflip script without jobs made for all players who cars are fliped over
+Vehicle flipover script for QBCore
 
 
 # Depedencies
@@ -11,7 +11,7 @@ This is an carflip script without jobs made for all players who cars are fliped 
 
 # OPTIONAL
 
-* Just uncomment '@Framework/imports.lua' with -- or use your own framework imports
+* Just uncomment '@rs_base/import.lua' with -- or use your own framework imports
 
 
 
@@ -20,7 +20,7 @@ This is an carflip script without jobs made for all players who cars are fliped 
 ```
  {
     type = "client",
-    event = "ks-carflip:flipcar",
+    event = "rs_carflip:flipcar",
     icon = "fas fa-car",
     label = "Flip Vehicle",
  },

@@ -1,17 +1,18 @@
 
-print('KS - CARFLIP HAS BEEN STARTED')
+print('ReduX Scripts - Vehicle flip started')
 fx_version 'cerulean'
 games { 'rdr3', 'gta5' }
 
-author 'KnownScripts'
-description 'An carflipper'
-version '1.0.0'
+author 'ReduX Scripts'
+description 'Redux Scripts vehicle flip system'
+version '1.2.0'
 
 
 client_script 'client.lua'
 
 shared_scripts {
-    '@Framework/imports.lua',
+    '@rs_base/shared/locale.lua',
+    '@rs_base/import.lua', -- Default '@qb-core/import.lua'
     '@ox_lib/init.lua'
 }
 

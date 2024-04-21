@@ -11,9 +11,14 @@ version '1.2.0'
 client_script 'client.lua'
 
 shared_scripts {
+    'shared/config.lua',
     '@rs_base/shared/locale.lua',
     '@rs_base/import.lua', -- Default '@qb-core/import.lua'
-    '@ox_lib/init.lua'
+    '@ox_lib/init.lua',
+
+
+    'lang/en.lua',
+    'lang/*.lua'
 }
 
 lua54 'yes'

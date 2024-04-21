@@ -18,7 +18,7 @@ function FlipCarOver()
     local VehicleData = Core.Functions.GetClosestVehicle()
     
     local dist = #(pedcoords - GetEntityCoords(VehicleData))
-    local success = lib.skillCheck({'easy', 'easy', {areaSize = 60, speedMultiplier = 2}, 'hard'}, {'x', 'x', 'x', 'x'})
+    local success = lib.skillCheck({'easy', 'easy', {areaSize = Config.areaSize, speedMultiplier = Config.speedMultiplier}, 'hard'}, {'x', 'x', 'x', 'x'})
     
 
     if dist <= 3  and IsVehicleOnAllWheels(VehicleData) == false then
@@ -29,12 +29,12 @@ function FlipCarOver()
                 Wait(10)
             end
             lib.progressCircle({
-                duration = 10000,
-                position = 'bottom',
-                useWhileDead = false,
-                canCancel = false,
+                duration = Config.duration,
+                position = Config.position,
+                useWhileDead = Config.useWhileDead,
+                canCancel = Config.canCancel,
                 disable = {
-                    car = true,
+                    car = Config.disable,
                 },
                 anim = {
                     dict = 'missfinale_c2ig_11',
@@ -51,7 +51,7 @@ function FlipCarOver()
                 id = '1',
                 title = Lang:t('notify.title'),
                 description = Lang:t('notify.desc'),
-                position = 'bottom',
+                position = Config.position,
                 style = {
                     backgroundColor = '#243661',
                     color = '#909296'
@@ -66,7 +66,7 @@ function FlipCarOver()
             id = '1',
             title = Lang:t('notify.title'),
             description = Lang:t('notify.fail'),
-            position = 'bottom',
+            position = Config.position,
             style = {
                 backgroundColor = '#243661',
                 color = '#D2D2D2'

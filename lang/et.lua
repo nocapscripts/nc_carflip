@@ -1,9 +1,9 @@
 local Translations = {
     notify = {
-        ["fliping"] = "Fliping vehicle",
+        ["fliping"] = "Sõiduki ümberpööramine",
         ["title"] = "ReduX Scripts",
-        ["desc"] = "Fliped vehicle!",
-        ["fail"] = "Vehicle flip failed!"
+        ["desc"] = "Sõiduk ümberpööratud!",
+        ["fail"] = "Ebaõnnestusid!"
     }
 }
 

@@ -20,7 +20,7 @@ Vehicle flipover script for QBCore
 ```
  {
     type = "client",
-    event = "rs_carflip:flipcar",
+    event = "nc_carflip:flipcar",
     icon = "fas fa-car",
     label = "Flip Vehicle",
  },

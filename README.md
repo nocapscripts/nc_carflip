@@ -1,4 +1,4 @@
-# ReduX Scripts Vehicle Flip System
+# NoCapScripts Vehicle Flip System
 
 Vehicle flipover script for QBCore
 

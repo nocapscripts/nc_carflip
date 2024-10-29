@@ -8,19 +8,11 @@ Vehicle flipover script for QBCore
 * ox_lib
 
 
-
-# OPTIONAL
-
-* Just uncomment '@rs_base/import.lua' with -- or use your own framework imports
-
-
-
-
 # Add qb-target function under Config.TargetBones in init.lua file
 ```
  {
     type = "client",
-    event = "rs_carflip:flipcar",
+    event = "nc_carflip:flipcar",
     icon = "fas fa-car",
     label = "Flip Vehicle",
  },

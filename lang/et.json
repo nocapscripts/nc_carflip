@@ -1,0 +1,6 @@
+{
+    "notify.fliping" : "Sõiduki ümberpööramine",
+    "notify.title" : "NoCapScripts Flip System",
+    "notify.desc" : "Sõiduk ümberpööratud!",
+    "notify.fail" : "Ümberpööramine ebaõnnestus."
+}

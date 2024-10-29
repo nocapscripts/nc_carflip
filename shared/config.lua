@@ -1,12 +1,15 @@
 Config = Config or {}
 
-Config.Framework = 'rs_base'
+Config.QBFramework = 'qb-core'
+Config.ESXCoreName = 'es_extended'
 
 -- OX SETTINGS
 
 Config.position = 'bottom'
 
-Config.duration = 10000
+Config.minDuration = 5000
+
+Config.maxDuration = 10000
 
 Config.canCancel = false
 
@@ -18,3 +21,5 @@ Config.disable = true
 Config.areaSize = 30 
 
 Config.speedMultiplier = 3
+
+

@@ -20,7 +20,7 @@ shared_scripts {
 }
 
 files {
-    'lang/*.json',
+    'locales/*.json',
 }
 
 lua54 'yes'

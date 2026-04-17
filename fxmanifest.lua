@@ -5,13 +5,13 @@ games { 'rdr3', 'gta5' }
 
 author 'NoCapScripts'
 description 'NoCapScripts vehicle flip system'
-version '1.2.0'
+version '2.0.0'
 
 
 client_script 'client.lua'
 
 shared_scripts {
-    'shared/config.lua',
+    'config.lua',
     '@ox_lib/init.lua',
 
 
@@ -20,7 +20,8 @@ shared_scripts {
 }
 
 files {
-    'locales/*.json',
+    'locales/et.json',
+    'locales/en.json',
 }
 
 lua54 'yes'

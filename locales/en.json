@@ -1,3 +1,6 @@
 {
-    
+  "notify.fliping": "Flipping vehicle",
+  "notify.title": "NoCapScripts Flip System",
+  "notify.desc": "Vehicle flipped!",
+  "notify.fail": "Flip failed."
 }

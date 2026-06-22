@@ -7,7 +7,6 @@ lib.locale(cfg.locale) -- LANG
 
 
 function DebugPrint(message)
-
     print("^2[nc_carflip]^0 " .. message)
 end
 
@@ -26,10 +25,6 @@ CreateThread(function()
             framework = "NCFW"
         end
     end
-
-
-
-
 end)
 
 
@@ -38,7 +33,6 @@ CreateThread(function()
     Wait(5)
 
     if framework == "QB" then -- FOR QB FRAMEWORK
-
         local Core = exports[cfg.QBFramework]:GetCoreObject()
 
 
@@ -62,12 +56,13 @@ CreateThread(function()
             local finalDur = math.random(minDuration, maxDuration)
 
             local dist = #(pedcoords - GetEntityCoords(VehicleData))
-            local success = lib.skillCheck({'easy', 'easy', {areaSize = cfg.areaSize, speedMultiplier = cfg.speedMultiplier}, 'easy'}, {'x', 'x', 'x', 'x'})
+            local success = lib.skillCheck(
+                { 'easy', 'easy', { areaSize = cfg.areaSize, speedMultiplier = cfg.speedMultiplier }, 'easy' },
+                { 'x', 'x', 'x', 'x' })
 
 
-            if dist <= 3  and IsVehicleOnAllWheels(VehicleData) == false then
+            if dist <= 3 and IsVehicleOnAllWheels(VehicleData) == false then
                 if success then
-
                     RequestAnimDict('missfinale_c2ig_11')
                     while not HasAnimDictLoaded("missfinale_c2ig_11") do
                         Wait(10)
@@ -117,21 +112,16 @@ CreateThread(function()
                     icon = 'warning',
                     iconColor = '#C53030'
                 })
-
             end
         end
-
     elseif framework == "ESX" then -- FOR ESX FRAMEWORK
-
         local Core = exports[cfg.ESXCoreName]:getSharedObject()
-        local PlayerData, PlayerJob, PlayerGang = {}, {}, {}
+        local PlayerData, PlayerJob = {}, {}, {}
 
         RegisterNetEvent('esx:playerLoaded')
-        AddEventHandler('esx:playerLoaded',function(xPlayer, isNew, skin)
-
+        AddEventHandler('esx:playerLoaded', function(xPlayer, isNew, skin)
             PlayerData = xPlayer
             PlayerJob = xPlayer.job
-            PlayerGang = xPlayer.gang
         end)
 
 
@@ -157,12 +147,13 @@ CreateThread(function()
             local finalDur = math.random(minDuration, maxDuration)
 
             local dist = #(pedcoords - GetEntityCoords(VehicleData))
-            local success = lib.skillCheck({'easy', 'easy', {areaSize = cfg.areaSize, speedMultiplier = cfg.speedMultiplier}, 'hard'}, {'x', 'x', 'x', 'x'})
+            local success = lib.skillCheck(
+                { 'easy', 'easy', { areaSize = cfg.areaSize, speedMultiplier = cfg.speedMultiplier }, 'hard' },
+                { 'x', 'x', 'x', 'x' })
 
 
-            if dist <= 3  and IsVehicleOnAllWheels(VehicleData) == false then
+            if dist <= 3 and IsVehicleOnAllWheels(VehicleData) == false then
                 if success then
-
                     RequestAnimDict('missfinale_c2ig_11')
                     while not HasAnimDictLoaded("missfinale_c2ig_11") do
                         Wait(10)
@@ -212,17 +203,14 @@ CreateThread(function()
                     icon = 'warning',
                     iconColor = '#C53030'
                 })
-
             end
         end
     elseif framework == "NCFW" then
-
         local Core = exports[cfg.NCFWCoreName]:getSharedObject()
         local PlayerData, PlayerJob, PlayerGang = {}, {}, {}
 
         RegisterNetEvent('nc:playerLoaded')
-        AddEventHandler('nc:playerLoaded',function(xPlayer, isNew, skin)
-
+        AddEventHandler('nc:playerLoaded', function(xPlayer, isNew, skin)
             PlayerData = xPlayer
             PlayerJob = xPlayer.job
             PlayerGang = xPlayer.gang
@@ -251,12 +239,13 @@ CreateThread(function()
             local finalDur = math.random(minDuration, maxDuration)
 
             local dist = #(pedcoords - GetEntityCoords(VehicleData))
-            local success = lib.skillCheck({'easy', 'easy', {areaSize = cfg.areaSize, speedMultiplier = cfg.speedMultiplier}, 'hard'}, {'x', 'x', 'x', 'x'})
+            local success = lib.skillCheck(
+                { 'easy', 'easy', { areaSize = cfg.areaSize, speedMultiplier = cfg.speedMultiplier }, 'hard' },
+                { 'x', 'x', 'x', 'x' })
 
 
-            if dist <= 3  and IsVehicleOnAllWheels(VehicleData) == false then
+            if dist <= 3 and IsVehicleOnAllWheels(VehicleData) == false then
                 if success then
-
                     RequestAnimDict('missfinale_c2ig_11')
                     while not HasAnimDictLoaded("missfinale_c2ig_11") do
                         Wait(10)
@@ -306,7 +295,6 @@ CreateThread(function()
                     icon = 'warning',
                     iconColor = '#C53030'
                 })
-
             end
         end
     end
